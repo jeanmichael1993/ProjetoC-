@@ -22,5 +22,11 @@ namespace SalesWebMVC.Services
             //acessar a fonte de dados e converter em uma lista
             return _context.Seller.ToList();
         }
+
+        public void Insert (Seller obj)
+        {
+            _context.Add(obj);
+            _context.SaveChanges();
+        }
     }
 }
